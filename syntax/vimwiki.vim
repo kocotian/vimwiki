@@ -361,22 +361,9 @@ if vimwiki#vars#get_global('hl_headers') == 0
   if !exists('g:colors_name')
     hi Title cterm=bold
   endif
-  " for s:i in range(1,6)
-  "   execute 'hi def link VimwikiHeader'.s:i.' Title'
-  " endfor
-  if s:i == 1
+  for s:i in range(1,6)
     execute 'hi def link VimwikiHeader'.s:i.' Title'
-  elseif s:i == 2
-    execute 'hi def link VimwikiHeader'.s:i.' Title2'
-  elseif s:i == 3
-    execute 'hi def link VimwikiHeader'.s:i.' Title3'
-  elseif s:i == 4
-    execute 'hi def link VimwikiHeader'.s:i.' Title4'
-  elseif s:i == 5
-    execute 'hi def link VimwikiHeader'.s:i.' Title5'
-  elseif s:i == 6
-    execute 'hi def link VimwikiHeader'.s:i.' Title6'
-  endif
+  endfor
 else
   for s:i in range(1,6)
     execute 'hi def VimwikiHeader'.s:i.' guibg=bg guifg='
@@ -403,7 +390,7 @@ hi def link VimwikiItalicBold VimwikiBoldItalic
 hi def link VimwikiBoldItalicT VimwikiBoldItalic
 hi def link VimwikiItalicBoldT VimwikiBoldItalic
 
-hi def VimwikiUnderline gui=underline
+hi def VimwikiUnderline Underline
 
 hi def link VimwikiCode PreProc
 hi def link VimwikiCodeT VimwikiCode
