@@ -390,7 +390,7 @@ hi def link VimwikiItalicBold VimwikiBoldItalic
 hi def link VimwikiBoldItalicT VimwikiBoldItalic
 hi def link VimwikiItalicBoldT VimwikiBoldItalic
 
-hi def VimwikiUnderline Underline
+hi def link VimwikiUnderline Underline
 
 hi def link VimwikiCode PreProc
 hi def link VimwikiCodeT VimwikiCode
