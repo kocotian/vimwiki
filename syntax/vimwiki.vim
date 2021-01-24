@@ -374,7 +374,7 @@ endif
 
 
 
-hi def link VimwikiMarkers Normal
+hi def link VimwikiMarkers Marker
 
 hi def link VimwikiEqIn Number
 hi def link VimwikiEqInT VimwikiEqIn
