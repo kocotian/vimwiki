@@ -1,5 +1,9 @@
+html {
+	background: #000000;
+	color: #ebdbb2;
+}
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
+  font-family: sans-serif;
   margin: 2em 4em 2em 4em;
   font-size: 120%;
   line-height: 130%;
@@ -12,12 +16,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-h1 {font-size: 2em; color: #000000;}
-h2 {font-size: 1.8em; color: #404040;}
-h3 {font-size: 1.6em; color: #707070;}
-h4 {font-size: 1.4em; color: #909090;}
-h5 {font-size: 1.2em; color: #989898;}
-h6 {font-size: 1em; color: #9c9c9c;}
+h1 {font-size: 2em; color: #cc241d;}
+h2 {font-size: 1.8em; color: #d79921;}
+h3 {font-size: 1.6em; color: #98971a;}
+h4 {font-size: 1.4em; color: #458488;}
+h5 {font-size: 1.2em; color: #689d6a;}
+h6 {font-size: 1em; color: #b16286;}
 
 p, pre, blockquote, table, ul, ol, dl {
   margin-top: 1em;
@@ -41,56 +45,56 @@ dt { font-weight: bold; }
 img { border: none; }
 
 pre {
-  border-left: 5px solid #dcdcdc;
-  background-color: #f5f5f5;
-  padding-left: 1em;
+  border-left: 5px solid #222222;
+  background-color: #1d2021;
+  padding: 1em;
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
   font-size: 0.8em;
   border-radius: 6px;
 }
 
 p > a {
-  color: white;
+  color: #ebdbb2;
   text-decoration: none;
   font-size: 0.7em;
   padding: 3px 6px;
   border-radius: 3px;
-  background-color: #1e90ff;
+  background-color: #458588;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 p > a:hover {
-  color: #dcdcdc;
-  background-color: #484848;
+  color: #ebdbb2;
+  background-color: #83a598;
 }
 
 li > a {
-  color: #1e90ff;
+  color: #689d6a;
   font-weight: bold;
   text-decoration: none;
 }
 
-li > a:hover { color: #ff4500; }
+li > a:hover { color: #fabd2f; }
 
 blockquote {
-  color: #686868;
+  color: #a89984;
   font-size: 0.8em;
   line-height: 120%;
   padding: 0.8em;
-  border-left: 5px solid #dcdcdc;
+  border-left: 5px solid #d79921;
 }
 
 th, td {
-  border: 1px solid #ccc;
+  border: 1px solid #3f3f3f;
   padding: 0.3em;
 }
 
-th { background-color: #f0f0f0; }
+th { background-color: #0f0f0f; }
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #3f3f3f;
   width: 100%;
 }
 
@@ -181,7 +185,7 @@ code {
   background-clip: padding-box;
   padding: 0px 3px;
   display: inline-block;
-  color: #52595d;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  color: #a89984;
+  border: 1px solid #928374;
+  background-color: #1d2021;
 }
