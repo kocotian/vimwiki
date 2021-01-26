@@ -1,4 +1,5 @@
 ![VimWiki: A Personal Wiki For Vim](doc/splash.png)
+Forked by Kocotian with a few tweaks like markers color and gruvbox css theme.
 
 [中文](README-cn.md)
 
