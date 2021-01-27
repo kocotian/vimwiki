@@ -45,7 +45,7 @@ dt { font-weight: bold; }
 img { border: none; }
 
 pre {
-  border-left: 5px solid #222222;
+  border-left: 5px solid #d79921;
   background-color: #1d2021;
   padding: 1em;
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
