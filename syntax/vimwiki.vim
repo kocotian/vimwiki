@@ -174,6 +174,32 @@ if vimwiki#vars#get_global('conceal_onechar_markers')
         \ vimwiki#vars#get_syntaxlocal('char_superscript').'/'.s:conceal
   execute 'syn match VimwikiSubScript contained /'.
         \ vimwiki#vars#get_syntaxlocal('char_subscript').'/'.s:conceal
+
+  execute 'syn match VimwikiRedTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_redtext').'/'.s:conceal
+  execute 'syn match VimwikiGreenTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_greentext').'/'.s:conceal
+  execute 'syn match VimwikiYellowTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_yellowtext').'/'.s:conceal
+  execute 'syn match VimwikiBlueTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_bluetext').'/'.s:conceal
+  execute 'syn match VimwikiMagentaTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_magentatext').'/'.s:conceal
+  execute 'syn match VimwikiCyanTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_cyantext').'/'.s:conceal
+
+  execute 'syn match VimwikiLRedTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lredtext').'/'.s:conceal
+  execute 'syn match VimwikiLGreenTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lgreentext').'/'.s:conceal
+  execute 'syn match VimwikiLYellowTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lyellowtext').'/'.s:conceal
+  execute 'syn match VimwikiLBlueTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lbluetext').'/'.s:conceal
+  execute 'syn match VimwikiLMagentaTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lmagentatext').'/'.s:conceal
+  execute 'syn match VimwikiLCyanTextChar contained /'.
+        \ vimwiki#vars#get_syntaxlocal('char_lcyantext').'/'.s:conceal
 endif
 
 
@@ -228,6 +254,32 @@ execute 'syn match VimwikiSuperScriptT contained /'
 execute 'syn match VimwikiSubScriptT contained /'
       \ .vimwiki#vars#get_syntaxlocal('char_subscript').'/'
 
+execute 'syn match VimwikiRedTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_redtext').'/'
+execute 'syn match VimwikiGreenTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_greentext').'/'
+execute 'syn match VimwikiYellowTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_yellowtext').'/'
+execute 'syn match VimwikiBlueTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_bluetext').'/'
+execute 'syn match VimwikiMagentaTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_magentatext').'/'
+execute 'syn match VimwikiCyanTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_cyantext').'/'
+
+execute 'syn match VimwikiLRedTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lredtext').'/'
+execute 'syn match VimwikiLGreenTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lgreentext').'/'
+execute 'syn match VimwikiLYellowTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lyellowtext').'/'
+execute 'syn match VimwikiLBlueTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lbluetext').'/'
+execute 'syn match VimwikiLMagentaTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lmagentatext').'/'
+execute 'syn match VimwikiLCyanTextCharT contained /'
+      \ .vimwiki#vars#get_syntaxlocal('char_lcyantext').'/'
+
 
 execute 'syntax match VimwikiTodo /'. vimwiki#vars#get_global('rxTodo') .'/'
 
@@ -246,6 +298,18 @@ syntax match VimwikiTableRow /^\s*|.\+|\s*$/
                            \ VimwikiDelTextT,
                            \ VimwikiSuperScriptT,
                            \ VimwikiSubScriptT,
+                           \ VimwikiRedTextT,
+                           \ VimwikiGreenTextT,
+                           \ VimwikiYellowTextT,
+                           \ VimwikiBlueTextT,
+                           \ VimwikiMagentaTextT,
+                           \ VimwikiCyanTextT,
+                           \ VimwikiLRedTextT,
+                           \ VimwikiLGreenTextT,
+                           \ VimwikiLYellowTextT,
+                           \ VimwikiLBlueTextT,
+                           \ VimwikiLMagentaTextT,
+                           \ VimwikiLCyanTextT,
                            \ VimwikiCodeT,
                            \ VimwikiEqInT,
                            \ @Spell
@@ -309,6 +373,56 @@ execute 'syntax match VimwikiSubScript /'.vimwiki#vars#get_syntaxlocal('rxSubScr
       \ '/ contains=VimwikiSubScriptChar,@Spell'
 execute 'syntax match VimwikiSubScriptT /'.vimwiki#vars#get_syntaxlocal('rxSubScript').
       \ '/ contained contains=VimwikiSubScriptCharT,@Spell'
+
+execute 'syntax match VimwikiRedText /'.vimwiki#vars#get_syntaxlocal('rxRedText').
+      \ '/ contains=VimwikiRedTextChar,@Spell'
+execute 'syntax match VimwikiRedTextT /'.vimwiki#vars#get_syntaxlocal('rxRedText').
+      \ '/ contained contains=VimwikiRedTextCharT,@Spell'
+execute 'syntax match VimwikiGreenText /'.vimwiki#vars#get_syntaxlocal('rxGreenText').
+      \ '/ contains=VimwikiGreenTextChar,@Spell'
+execute 'syntax match VimwikiGreenTextT /'.vimwiki#vars#get_syntaxlocal('rxGreenText').
+      \ '/ contained contains=VimwikiGreenTextCharT,@Spell'
+execute 'syntax match VimwikiYellowText /'.vimwiki#vars#get_syntaxlocal('rxYellowText').
+      \ '/ contains=VimwikiYellowTextChar,@Spell'
+execute 'syntax match VimwikiYellowTextT /'.vimwiki#vars#get_syntaxlocal('rxYellowText').
+      \ '/ contained contains=VimwikiYellowTextCharT,@Spell'
+execute 'syntax match VimwikiBlueText /'.vimwiki#vars#get_syntaxlocal('rxBlueText').
+      \ '/ contains=VimwikiBlueTextChar,@Spell'
+execute 'syntax match VimwikiBlueTextT /'.vimwiki#vars#get_syntaxlocal('rxBlueText').
+      \ '/ contained contains=VimwikiBlueTextCharT,@Spell'
+execute 'syntax match VimwikiMagentaText /'.vimwiki#vars#get_syntaxlocal('rxMagentaText').
+      \ '/ contains=VimwikiMagentaTextChar,@Spell'
+execute 'syntax match VimwikiMagentaTextT /'.vimwiki#vars#get_syntaxlocal('rxMagentaText').
+      \ '/ contained contains=VimwikiMagentaTextCharT,@Spell'
+execute 'syntax match VimwikiCyanText /'.vimwiki#vars#get_syntaxlocal('rxCyanText').
+      \ '/ contains=VimwikiCyanTextChar,@Spell'
+execute 'syntax match VimwikiCyanTextT /'.vimwiki#vars#get_syntaxlocal('rxCyanText').
+      \ '/ contained contains=VimwikiCyanTextCharT,@Spell'
+
+execute 'syntax match VimwikiLRedText /'.vimwiki#vars#get_syntaxlocal('rxLRedText').
+      \ '/ contains=VimwikiLRedTextChar,@Spell'
+execute 'syntax match VimwikiLRedTextT /'.vimwiki#vars#get_syntaxlocal('rxLRedText').
+      \ '/ contained contains=VimwikiLRedTextCharT,@Spell'
+execute 'syntax match VimwikiLGreenText /'.vimwiki#vars#get_syntaxlocal('rxLGreenText').
+      \ '/ contains=VimwikiLGreenTextChar,@Spell'
+execute 'syntax match VimwikiLGreenTextT /'.vimwiki#vars#get_syntaxlocal('rxLGreenText').
+      \ '/ contained contains=VimwikiLGreenTextCharT,@SpellL'
+execute 'syntax match VimwikiLYellowText /'.vimwiki#vars#get_syntaxlocal('rxLYellowText').
+      \ '/ contains=VimwikiLYellowTextChar,@Spell'
+execute 'syntax match VimwikiLYellowTextT /'.vimwiki#vars#get_syntaxlocal('rxLYellowText').
+      \ '/ contained contains=VimwikiLYellowTextCharT,@Spell'
+execute 'syntax match VimwikiLBlueText /'.vimwiki#vars#get_syntaxlocal('rxLBlueText').
+      \ '/ contains=VimwikiLBlueTextChar,@Spell'
+execute 'syntax match VimwikiLBlueTextT /'.vimwiki#vars#get_syntaxlocal('rxLBlueText').
+      \ '/ contained contains=VimwikiLBlueTextCharT,@Spell'
+execute 'syntax match VimwikiLMagentaText /'.vimwiki#vars#get_syntaxlocal('rxLMagentaText').
+      \ '/ contains=VimwikiLMagentaTextChar,@Spell'
+execute 'syntax match VimwikiLMagentaTextT /'.vimwiki#vars#get_syntaxlocal('rxLMagentaText').
+      \ '/ contained contains=VimwikiLMagentaTextCharT,@Spell'
+execute 'syntax match VimwikiLCyanText /'.vimwiki#vars#get_syntaxlocal('rxLCyanText').
+      \ '/ contains=VimwikiLCyanTextChar,@Spell'
+execute 'syntax match VimwikiLCyanTextT /'.vimwiki#vars#get_syntaxlocal('rxLCyanText').
+      \ '/ contained contains=VimwikiLCyanTextCharT,@Spell'
 
 execute 'syntax match VimwikiCode /'.vimwiki#vars#get_syntaxlocal('rxCode').
       \ '/ contains=VimwikiCodeChar,@NoSpell'
@@ -423,6 +537,32 @@ hi def link VimwikiSuperScriptT VimwikiSuperScript
 hi def link VimwikiSubScript Number
 hi def link VimwikiSubScriptT VimwikiSubScript
 
+hi def link VimwikiRedText          Red
+hi def link VimwikiRedTextT         VimwikiRedText
+hi def link VimwikiGreenText        Green
+hi def link VimwikiGreenTextT       VimwikiGreenText
+hi def link VimwikiYellowText       Yellow
+hi def link VimwikiYellowTextT      VimwikiYellowText
+hi def link VimwikiBlueText         Blue
+hi def link VimwikiBlueTextT        VimwikiBlueText
+hi def link VimwikiMagentaText      Magenta
+hi def link VimwikiMagentaTextT     VimwikiMagentaText
+hi def link VimwikiCyanText         Cyan
+hi def link VimwikiCyanTextT        VimwikiCyanText
+
+hi def link VimwikiLRedText          LRed
+hi def link VimwikiLRedTextT         VimwikiLRedText
+hi def link VimwikiLGreenText        LGreen
+hi def link VimwikiLGreenTextT       VimwikiLGreenText
+hi def link VimwikiLYellowText       LYellow
+hi def link VimwikiLYellowTextT      VimwikiLYellowText
+hi def link VimwikiLBlueText         LBlue
+hi def link VimwikiLBlueTextT        VimwikiLBlueText
+hi def link VimwikiLMagentaText      LMagenta
+hi def link VimwikiLMagentaTextT     VimwikiLMagentaText
+hi def link VimwikiLCyanText         LCyan
+hi def link VimwikiLCyanTextT        VimwikiLCyanText
+
 hi def link VimwikiTodo Todo
 hi def link VimwikiComment Comment
 
@@ -439,6 +579,21 @@ hi def link VimwikiItalicBoldChar VimwikiMarkers
 hi def link VimwikiDelTextChar VimwikiMarkers
 hi def link VimwikiSuperScriptChar VimwikiMarkers
 hi def link VimwikiSubScriptChar VimwikiMarkers
+
+hi def link VimwikiRedTextChar VimwikiMarkers
+hi def link VimwikiGreenTextChar VimwikiMarkers
+hi def link VimwikiYellowTextChar VimwikiMarkers
+hi def link VimwikiBlueTextChar VimwikiMarkers
+hi def link VimwikiMagentaTextChar VimwikiMarkers
+hi def link VimwikiCyanTextChar VimwikiMarkers
+
+hi def link VimwikiLRedTextChar VimwikiMarkers
+hi def link VimwikiLGreenTextChar VimwikiMarkers
+hi def link VimwikiLYellowTextChar VimwikiMarkers
+hi def link VimwikiLBlueTextChar VimwikiMarkers
+hi def link VimwikiLMagentaTextChar VimwikiMarkers
+hi def link VimwikiLCyanTextChar VimwikiMarkers
+
 hi def link VimwikiCodeChar VimwikiMarkers
 hi def link VimwikiHeaderChar VimwikiMarkers
 
@@ -450,6 +605,21 @@ hi def link VimwikiItalicBoldCharT VimwikiMarkers
 hi def link VimwikiDelTextCharT VimwikiMarkers
 hi def link VimwikiSuperScriptCharT VimwikiMarkers
 hi def link VimwikiSubScriptCharT VimwikiMarkers
+
+hi def link VimwikiRedTextCharT VimwikiMarkers
+hi def link VimwikiGreenTextCharT VimwikiMarkers
+hi def link VimwikiYellowTextCharT VimwikiMarkers
+hi def link VimwikiBlueTextCharT VimwikiMarkers
+hi def link VimwikiMagentaTextCharT VimwikiMarkers
+hi def link VimwikiCyanTextCharT VimwikiMarkers
+
+hi def link VimwikiLRedTextCharT VimwikiMarkers
+hi def link VimwikiLGreenTextCharT VimwikiMarkers
+hi def link VimwikiLYellowTextCharT VimwikiMarkers
+hi def link VimwikiLBlueTextCharT VimwikiMarkers
+hi def link VimwikiLMagentaTextCharT VimwikiMarkers
+hi def link VimwikiLCyanTextCharT VimwikiMarkers
+
 hi def link VimwikiCodeCharT VimwikiMarkers
 hi def link VimwikiHeaderCharT VimwikiMarkers
 hi def link VimwikiLinkCharT VimwikiLinkT

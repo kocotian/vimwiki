@@ -64,6 +64,33 @@ let s:default_syntax.char_superscript = '^'
 let s:default_syntax.rxSubScript = ',,[^,`]\+,,'
 let s:default_syntax.char_subscript = ',,'
 
+" colored text: ,<color>text,<color>
+let s:default_syntax.rxRedText          = ',r[^^`]\+,r'
+let s:default_syntax.char_redtext       = ',r'
+let s:default_syntax.rxGreenText        = ',g[^^`]\+,g'
+let s:default_syntax.char_greentext     = ',g'
+let s:default_syntax.rxYellowText       = ',y[^^`]\+,y'
+let s:default_syntax.char_yellowtext    = ',y'
+let s:default_syntax.rxBlueText         = ',b[^^`]\+,b'
+let s:default_syntax.char_bluetext      = ',b'
+let s:default_syntax.rxMagentaText      = ',m[^^`]\+,m'
+let s:default_syntax.char_magentatext   = ',m'
+let s:default_syntax.rxCyanText         = ',c[^^`]\+,c'
+let s:default_syntax.char_cyantext      = ',c'
+
+let s:default_syntax.rxLRedText          = ',R[^^`]\+,R'
+let s:default_syntax.char_lredtext       = ',R'
+let s:default_syntax.rxLGreenText        = ',G[^^`]\+,G'
+let s:default_syntax.char_lgreentext     = ',G'
+let s:default_syntax.rxLYellowText       = ',Y[^^`]\+,Y'
+let s:default_syntax.char_lyellowtext    = ',Y'
+let s:default_syntax.rxLBlueText         = ',B[^^`]\+,B'
+let s:default_syntax.char_lbluetext      = ',B'
+let s:default_syntax.rxLMagentaText      = ',M[^^`]\+,M'
+let s:default_syntax.char_lmagentatext   = ',M'
+let s:default_syntax.rxLCyanText         = ',C[^^`]\+,C'
+let s:default_syntax.char_lcyantext      = ',C'
+
 " generic headers
 let s:default_syntax.rxH = '='
 let s:default_syntax.symH = 1
